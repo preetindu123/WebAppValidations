@@ -1,0 +1,95 @@
+﻿@model WebAppValidations.Models.UserModel
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+<h1>SignUp</h1>
+
+<h4>UserModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SignUp" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Passoword" class="control-label"></label>
+                <input asp-for="Passoword" class="form-control" />
+                <span asp-validation-for="Passoword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassoword" class="control-label"></label>
+                <input asp-for="ConfirmPassoword" class="form-control" />
+                <span asp-validation-for="ConfirmPassoword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MobileNo" class="control-label"></label>
+                <input asp-for="MobileNo" class="form-control" />
+                <span asp-validation-for="MobileNo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <select asp-for="Country" asp-items="Model.Countries"></select>
+                <span asp-validation-for="Country" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <select asp-for="City" asp-items="Model.Cities"></select>
+                <span asp-validation-for="City" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">              
+                @foreach (var c in System.Enum.GetValues(typeof(Gender)))
+                {
+                    <label asp-for="UserGender">@c</label>
+                    <input type="radio" asp-for="UserGender" value="@((int)c)" />
+                }
+                <span asp-validation-for="UserGender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Terms" /> @Html.DisplayNameFor(model => model.Terms)
+                </label>
+                <span asp-validation-for="Terms" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign Up" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+            <partial name="_ValidationScriptsPartial"/>
+<script>
+    jQuery.validator.unobtrusive.adapters.add("checkbox", function (options) {
+        
+        if (options.element.tagName.toUpperCase() == "INPUT" && options.element.type.toUpperCase() == "CHECKBOX")
+        {           
+                options.rules["required"] = true;
+                if (options.message) {
+                    options.messages["required"] = options.message;                
+        }
+    }
+    });
+</script>
+}
