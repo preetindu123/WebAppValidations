@@ -22,7 +22,7 @@ namespace WebAppValidations.Controllers
 
         public IActionResult SignUp()
         {
-            var model = new UserModel();
+            var model = new User();
             ViewBag.CountryList = _uow.CountryRepo.GetAll();
             ViewBag.CityList = _uow.CityRepo.GetAll().ToList();
             return View(model);
