@@ -76,9 +76,5 @@ namespace WebAppValidations.Models
 
     }
 
-    public enum Gender
-        {
-            Male,
-            Female            
-        }
+    
 }

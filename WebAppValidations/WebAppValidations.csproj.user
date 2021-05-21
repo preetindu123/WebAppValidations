@@ -10,5 +10,7 @@
     <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>False</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
+    <ShowAllFiles>true</ShowAllFiles>
+    <WebStackScaffolding_DbContextTypeFullName>DAL.DatabaseContext</WebStackScaffolding_DbContextTypeFullName>
   </PropertyGroup>
 </Project>

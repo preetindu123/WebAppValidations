@@ -1,8 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var name = ViewData["name"];
+    var company = ViewBag.Company;
 }
-
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+     ViewData : @ViewData["name"], @ViewData["Company"],@name <br />
+    ViewBag : @ViewBag.Company, @ViewBag.name, @company
+ </div>
+
+<a asp-action="Data" asp-controller="Home" asp-route-id="1" asp-route-name="preeti" asp-route-address="mumbai">Goto</a>

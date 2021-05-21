@@ -1,8 +1,10 @@
-﻿@model WebAppValidations.Models.UserModel
+﻿@*@model DomainModels.UserModel*@
+@model DAL.User
 
 @{
-    ViewData["Title"] = "SignUp";
+    ViewData["Title"] = Model != null ? "Edit" : "SignUp";
 }
+
 
 <h1>SignUp</h1>
 
@@ -13,9 +15,9 @@
         <form asp-action="SignUp" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Passoword" class="control-label"></label>
@@ -38,28 +40,29 @@
                 <input asp-for="Address" class="form-control" />
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
-
             <div class="form-group">
-                <label asp-for="Country" class="control-label"></label>
-                <select asp-for="Country" asp-items="Model.Countries"></select>
-                <span asp-validation-for="Country" class="text-danger"></span>
-
+                <label asp-for="CountryId" class="control-label"></label>
+                <select asp-for="CountryId" asp-items="@(new SelectList(ViewBag.CountryList,"CountryId","CountryName"))">
+                    <option value="">--Select--</option>
+                </select>
+                <span asp-validation-for="CountryId" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="City" class="control-label"></label>
-                <select asp-for="City" asp-items="Model.Cities"></select>
-                <span asp-validation-for="City" class="text-danger"></span>
-
+                <label asp-for="CityId" class="control-label"></label>
+                <select asp-for="CityId" asp-items="@(new SelectList(ViewBag.CityList,"CityId","CityName"))">
+                    <option value="">--Select--</option>
+                </select>
+                <span asp-validation-for="CityId" class="text-danger"></span>
             </div>
 
-            <div class="form-group">              
+            <div class="form-group">
                 @foreach (var c in System.Enum.GetValues(typeof(Gender)))
                 {
-                    <label asp-for="UserGender">@c</label>
-                    <input type="radio" asp-for="UserGender" value="@((int)c)" />
+                    <label asp-for="Gender">@c</label>
+                    <input type="radio" asp-for="Gender" value="@((int)c)" />
                 }
-                <span asp-validation-for="UserGender" class="text-danger"></span>
+                <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
 
             <div class="form-group form-check">
@@ -79,17 +82,16 @@
 
 
 @section Scripts {
-            <partial name="_ValidationScriptsPartial"/>
-<script>
-    jQuery.validator.unobtrusive.adapters.add("checkbox", function (options) {
-        
-        if (options.element.tagName.toUpperCase() == "INPUT" && options.element.type.toUpperCase() == "CHECKBOX")
-        {           
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        jQuery.validator.unobtrusive.adapters.add("checkbox", function (options) {
+
+            if (options.element.tagName.toUpperCase() == "INPUT" && options.element.type.toUpperCase() == "CHECKBOX") {
                 options.rules["required"] = true;
                 if (options.message) {
-                    options.messages["required"] = options.message;                
-        }
-    }
-    });
-</script>
+                    options.messages["required"] = options.message;
+                }
+            }
+        });
+    </script>
 }

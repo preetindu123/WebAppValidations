@@ -4,14 +4,14 @@
     "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\WebAppValidations.csproj": {}
   },
   "projects": {
-    "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\WebAppValidations.csproj": {
+    "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\WebAppValidations.csproj",
-        "projectName": "WebAppValidations",
-        "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\WebAppValidations.csproj",
+        "projectUniqueName": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Riddhi\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\obj\\",
+        "outputPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -46,6 +46,235 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DomainModels\\DomainModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DomainModels\\DomainModels.csproj",
+        "projectName": "DomainModels",
+        "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DomainModels\\DomainModels.csproj",
+        "packagesPath": "C:\\Users\\Riddhi\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DomainModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Riddhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Study\\ASP.NET CORE\\WebAppValidations\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Riddhi\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Riddhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DAL\\DAL.csproj"
+              },
+              "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DomainModels\\DomainModels.csproj": {
+                "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DomainModels\\DomainModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\WebAppValidations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\WebAppValidations.csproj",
+        "projectName": "WebAppValidations",
+        "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\WebAppValidations.csproj",
+        "packagesPath": "C:\\Users\\Riddhi\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\WebAppValidations\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Riddhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DAL\\DAL.csproj"
+              },
+              "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DomainModels\\DomainModels.csproj": {
+                "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\DomainModels\\DomainModels.csproj"
+              },
+              "D:\\Study\\ASP.NET CORE\\WebAppValidations\\Repository\\Repository.csproj": {
+                "projectPath": "D:\\Study\\ASP.NET CORE\\WebAppValidations\\Repository\\Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
